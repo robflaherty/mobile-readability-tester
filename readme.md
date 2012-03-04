@@ -5,7 +5,7 @@ Load this page on your mobile or tablet device and fiddle with the knobs to adju
 The pixel height of the content area is displayed, as is the number of "pages" or screens on an iPhone that must be scrolled to view the entire content. (Assuming portrait mode and factoring out the URL bar, the visible viewport is 416px tall. So the pages calculation is just height/416.)	 
 
 ## Demo
-[View Test Page](http://robflaherty.github.com/mobile-font-tester/)
+[View Test Page](http://robflaherty.github.com/mobile-readability-tester/)
 
 ## License
 WTFPL
