@@ -7,6 +7,11 @@ The pixel height of the content area is displayed, as is the number of "pages" o
 ## Demo
 [View Test Page](http://robflaherty.github.com/mobile-readability-tester/)
 
+## Plugin Usage
+
+Load jquery.readability.js into your website, and call the readability function around your container element.
+`$('#content').readability();
+
 ## License
 WTFPL
 
