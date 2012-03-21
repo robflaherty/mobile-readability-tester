@@ -11,64 +11,12 @@
   <style>
     body { font: 14px/1.5 Georgia; -webkit-text-size-adjust: none; margin-top: 0; padding-top: 0; /*background: url(baseline-24.png);*/ padding: 0; margin: 0; }
     #content { padding: 0; margin: 0; }
-    select { font-size: 16px; }
-    .info { font-family: sans-serif; border-bottom: 1px solid #ddd; overflow: hidden; margin: 0 0 1.5em; padding: 10px; background: #eee; }
-    .info select { float: right; }
-    .article-height, .article-pages { font-weight: bold; float: right; }
-    h1 { font-size: 1.5em; margin: 0 0 1em; padding: 0; line-height: 1em; }
     p { margin: 0 0 1.5em; }
     .relative { position: relative; }
-    fieldset { margin: 0 0 10px; padding: 0; border: 0; }
   </style>
 </head>
 <body>
-  <div class="info">
-    <h1>Mobile Readability Tester</h1>
-    <fieldset>
-    <label>Font Family</label>
-      <select id="choose-font">
-        <option value="Georgia" selected>Georgia</option>
-        <option value="Helvetica">Helvetica</option>
-      </select>
-    </fieldset>
-    <fieldset>
-      <label>Font Size</label>
-      <select id="choose-size">
-        <option value="12px">12px</option>
-        <option value="13px">13px</option>
-        <option value="14px">14px</option>
-        <option value="15px">15px</option>
-        <option value="16px" selected>16px</option>
-        <option value="17px">17px</option>
-        <option value="18px">18px</option>
-        <option value="19px">19px</option>
-        <option value="20px">20px</option>
-      </select>
-    </fieldset>
-    <fieldset>
-      <label>Content Padding</label>    
-      <select id="choose-padding">
-        <option value="0px">0px</option>
-        <option value="5px">5px</option>
-        <option value="10px" selected>10px</option>
-        <option value="15px">15px</option>
-        <option value="20px">20px</option>
-        <option value="25px">25px</option>
-        <option value="30px">30px</option>
-        <option value="35px">35px</option>
-        <option value="40px">40px</option>
-      </select>
-    </fieldset>
-    <fieldset>
-      <label>Article Height</label>
-      <span class="article-height"></span>
-    </fieldset>
-    <fieldset>
-      <label>iPhone Pages</label>
-      <span class="article-pages"></span>
-    </fieldset>    
-  </div>
-  <div id="content">
+    <div id="content">
     <h1>The Wizard of Oz</h1>
   
     <p>Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer's wife. Their house was small, for the lumber to build it had to be carried by wagon many miles. There were four walls, a floor and a roof, which made one room; and this room contained a rusty looking cookstove, a cupboard for the dishes, a table, three or four chairs, and the beds. Uncle Henry and Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar--except a small hole dug in the ground, called a cyclone cellar, where the family could go in case one of those great whirlwinds arose, mighty enough to crush any building in its path. It was reached by a trap door in the middle of the floor, from which a ladder led down into the small, dark hole.</p>
@@ -116,57 +64,11 @@
   </div>
   
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>
-  $(function() {
-
-    setFont();    
-    setPadding();
-    setSize();
-    printCalc();
-    
-    $('#choose-padding').change(function() {
-      setPadding();
-      printCalc();
-    });
-    
-    $('#choose-font').change(function() {
-      setFont();
-      printCalc();      
-    });    
-    
-    $('#choose-size').change(function() {
-      setSize();
-      printCalc();      
-    });
-        
-    function setFont() {
-      var option = $('#choose-font').find('option:selected').val();
-      $('#content').css({ 'font-family': option });
-    }    
-    
-    function setSize() {
-      var option = $('#choose-size').find('option:selected').val();
-      $('#content').css({ 'font-size': option });
-    }
-    
-    function setPadding() {
-      var option = $('#choose-padding').find('option:selected').val();
-      $('#content').css({ 'padding-left': option, 'padding-right': option });
-      
-      //Hack to fix text reflow
-      $('p').toggleClass('relative');      
-      setSize();
-    }    
-    
-    function printCalc() {
-      $('.article-height').html($('#content').height() + 'px');      
-      $('.article-pages').html(($('#content').height() / 416).toFixed(1));      
-    }
-        
-  });
-  
-  var hideUrlBar = function(){/mobile/i.test(navigator.userAgent)&&!pageYOffset&&!location.hash&&setTimeout(function(){window.scrollTo(0,1)},1000)};
-  //hideUrlBar();
-  </script>
-</body>
+	<script src="js/jquery.readability.js"></script>
+	<script>
+		$(function(){
+			$('#content').readability();
+		});
+	</script>
+	</body>
 </html>
