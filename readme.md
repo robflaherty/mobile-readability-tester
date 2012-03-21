@@ -10,7 +10,8 @@ The pixel height of the content area is displayed, as is the number of "pages" o
 ## Plugin Usage
 
 Load jquery.readability.js into your website, and call the readability function around your container element.
-`$('#content').readability();
+
+`` $('#content').readability(); ``
 
 ## License
 WTFPL
