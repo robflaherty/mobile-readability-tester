@@ -31,11 +31,9 @@
     return addControls();
   });
 
-
   function addControls() {
 
-
-    $('head').append('<link rel="stylesheet" type="text/css" href="styles.css" />');
+    jQuery('head').append('<link rel="stylesheet" type="text/css" href="styles.css" />');
   	
     var controls = '<div class="info"> \
       <h1>Mobile Readability Tester</h1> \
@@ -84,8 +82,16 @@
       </fieldset> \
     </div>';
 
-    $('body').prepend(controls);
+    jQuery('body').prepend(controls);
 
   } 
+  
+  function addHandlers() {
+    var container = prompt('ID for content area?', "#content");
+    
+    
+  }
+  
+  addHandlers();
 
 }());
