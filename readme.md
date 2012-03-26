@@ -7,6 +7,9 @@ The pixel height of the content area is displayed, as is the number of "pages" o
 ## Demo
 [View Test Page](http://robflaherty.github.com/mobile-readability-tester/)
 
+## Plugin
+If you'd like to embed the testing controls within your own project [buzzedword](https://github.com/buzzedword) has written a [jQuery Plugin](https://github.com/buzzedword/mobile-readability-tester) fork.
+
 ## License
 WTFPL
 
