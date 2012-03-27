@@ -33,7 +33,7 @@
 
   function addControls() {
 
-    jQuery('head').append('<link rel="stylesheet" type="text/css" href="styles.css" />');
+    jQuery('head').append('<link rel="stylesheet" type="text/css" href="http://robflaherty.github.com/mobile-readability-tester/styles.css" />');
   	
     var controls = '<div class="info"> \
       <h1>Mobile Readability Tester</h1> \
@@ -83,15 +83,56 @@
     </div>';
 
     jQuery('body').prepend(controls);
+    addHandlers();
 
   } 
   
   function addHandlers() {
+
     var container = prompt('ID for content area?', "#content");
+
+    printCalc();
     
+    jQuery('#choose-padding').change(function() {
+      setPadding();
+      printCalc();
+    });
     
+    jQuery('#choose-font').change(function() {
+      setFont();
+      printCalc();      
+    });    
+    
+    jQuery('#choose-size').change(function() {
+      setSize();
+      printCalc();      
+    });
+        
+    function setFont() {
+      var option = jQuery('#choose-font').find('option:selected').val();
+      jQuery(container).css({ 'font-family': option });
+    }    
+    
+    function setSize() {
+      var option = jQuery('#choose-size').find('option:selected').val();
+      jQuery(container).css({ 'font-size': option });
+    }
+    
+    function setPadding() {
+      var option = jQuery('#choose-padding').find('option:selected').val();
+      jQuery(container).css({ 'padding-left': option, 'padding-right': option });
+      
+      //Hack to fix text reflow
+      jQuery('p').toggleClass('relative');      
+      setSize();
+    }    
+    
+    function printCalc() {
+      console.log(container);
+      jQuery('.article-height').html(jQuery(container).height() + 'px');      
+      jQuery('.article-pages').html((jQuery(container).height() / 416).toFixed(1));      
+    }
+      
   }
   
-  addHandlers();
-
 }());
