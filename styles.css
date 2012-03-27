@@ -1,0 +1,10 @@
+body { font: 14px/1.5 Georgia; -webkit-text-size-adjust: none; margin-top: 0; padding-top: 0; /*background: url(baseline-24.png);*/ padding: 0; margin: 0; }
+#content { padding: 0; margin: 0; }
+select { font-size: 16px; }
+.info { font-family: sans-serif; border-bottom: 1px solid #ddd; overflow: hidden; margin: 0 0 1.5em; padding: 10px; background: #eee; }
+.info select { float: right; }
+.article-height, .article-pages { font-weight: bold; float: right; }
+h1 { font-size: 1.5em; margin: 0 0 1em; padding: 0; line-height: 1em; }
+p { margin: 0 0 1.5em; }
+.relative { position: relative; }
+fieldset { margin: 0 0 10px; padding: 0; border: 0; }
