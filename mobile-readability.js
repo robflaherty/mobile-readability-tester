@@ -1,3 +1,8 @@
+/*
+ * Mobile Readability Tester by Rob Flaherty | @robflaherty | http://www.ravelrumba.com
+ * WTFPL
+ */
+
 (function() {
   
   /* 
