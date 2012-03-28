@@ -1,9 +1,12 @@
 (function() {
+  
+  /* 
+   * jQuery injection courtesy, @reybango, @paul_irish, and @jquery
+   * http://blog.reybango.com/2010/09/02/how-to-easily-inject-jquery-into-any-web-page/
+   */
 
-	//Inject jQuery
 	var script = document.createElement('script');
 
-  // Mmore or less stolen form jquery core and adapted by paul irish
   function getScript(url, success) {
     
     var script = document.createElement('script'),
@@ -33,10 +36,12 @@
 
   function addControls() {
 
+    // Pump in stylesheet hosted at github
     jQuery('head').append('<link rel="stylesheet" type="text/css" href="http://robflaherty.github.com/mobile-readability-tester/styles.css" />');
-  	
-    var controls = '<div class="info"> \
-      <h1>Mobile Readability Tester</h1> \
+    
+    // Quick and dirty HTML  	
+    var controls = '<div id="mobile-readability-controls"> \
+      <h1>Mobile Readability Tester <small><a href="https://github.com/robflaherty/mobile-readability-tester">(Home)</a></small></h1> \
       <fieldset> \
       <label>Font Family</label> \
         <select id="choose-font"> \
@@ -89,7 +94,7 @@
   
   function addHandlers() {
 
-    var container = prompt('ID for content area?', "#content");
+    var container = prompt("What's the selector for the element that wraps your main content?", "#content");
 
     printCalc();
     
@@ -128,7 +133,6 @@
     }    
     
     function printCalc() {
-      console.log(container);
       jQuery('.article-height').html(jQuery(container).height() + 'px');      
       jQuery('.article-pages').html((jQuery(container).height() / 416).toFixed(1));      
     }
