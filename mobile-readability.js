@@ -98,8 +98,14 @@
   } 
   
   function addHandlers() {
+    
+    var container;
 
-    var container = prompt("What's the selector for the element that wraps your main content?", "#content");
+    if (typeof(mobileReadabilityStandalone) == "undefined") {
+      container = prompt("What's the selector for the element that wraps your main content?", "#content");
+    } else {
+      container = '#content';
+    }
 
     printCalc();
     
