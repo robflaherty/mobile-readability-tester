@@ -1,13 +1,12 @@
 /* Global styles */
 body { -webkit-text-size-adjust: none; }
-p { margin: 0 0 1.5em; }
 .relative { position: relative; }
 
 /* Controls */
+#mobile-readability-controls  { font-family: sans-serif; border-bottom: 1px solid #ddd; overflow: hidden; margin: 0 0 1.5em; padding: 10px; background: #eee; }
 #mobile-readability-controls h1 { font-size: 18px; font-weight: bold; }
 #mobile-readability-controls a { text-decoration: none; }
-#mobile-readability-controls select { font-size: 16px; }
-#mobile-readability-controls  { font-family: sans-serif; border-bottom: 1px solid #ddd; overflow: hidden; margin: 0 0 1.5em; padding: 10px; background: #eee; }
-#mobile-readability-controls  select { float: right; }
+#mobile-readability-controls label { display: inline; }
+#mobile-readability-controls select { font-size: 16px; float: right; width: auto; }
 #mobile-readability-controls .article-height, #mobile-readability-controls .article-pages { font-weight: bold; float: right; }
 #mobile-readability-controls fieldset { margin: 0 0 10px; padding: 0; border: 0; }
