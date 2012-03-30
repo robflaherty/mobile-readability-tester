@@ -10,7 +10,7 @@ The pixel height of the content area is displayed, as is the number of "pages" o
 ## Bookmarklet
 You can also insert the test controls into your own page via a bookmarklet. This is still a bit rough/experimental but it sort of works. 
 
-[Bookmarklet Page](http://robflaherty.github.com/mobile-readability-tester/bookmarklet/mobile-readability.txt)
+[Bookmarklet Page](http://robflaherty.github.com/mobile-readability-tester/bookmarklet/index.html)
 
 [Drag to bookmarks bar]
 
