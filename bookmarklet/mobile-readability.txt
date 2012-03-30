@@ -1,6 +1,0 @@
-javascript:(function(){
-  s=document.createElement('script');
-  s.type='text/javascript';
-  s.src='http://dl.dropbox.com/u/1125125/mobile-readability.min.js';
-  document.body.appendChild(s);
-})();
