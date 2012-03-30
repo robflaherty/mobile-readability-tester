@@ -12,8 +12,6 @@ You can also insert the test controls into your own page via a bookmarklet. This
 
 [Bookmarklet Page](http://robflaherty.github.com/mobile-readability-tester/bookmarklet/index.html)
 
-[Drag to bookmarks bar]
-
 ## Plugin
 If you'd like to embed the testing controls within your own project [buzzedword](https://github.com/buzzedword) has written a [jQuery Plugin](https://github.com/buzzedword/mobile-readability-tester) fork.
 
